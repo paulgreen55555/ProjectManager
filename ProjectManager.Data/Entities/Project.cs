@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectManager.Data.Models
+namespace ProjectManager.Data.Entities
 {
     public class Project
     {
@@ -22,6 +22,5 @@ namespace ProjectManager.Data.Models
 
         public DateTime CloseDate { get; set; }
 
-        public List<Staff> StaffList { get; set; }
     }
 }

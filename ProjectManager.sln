@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManager.BusinessLogi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManager.Test", "ProjectManager.Test\ProjectManager.Test.csproj", "{A48D41AD-DBE5-4DA1-B4EE-02C282E002FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatDb", "CreatDb\CreatDb.csproj", "{BA89627F-24BB-4D2F-A8A8-1459B784A9F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDB", "CreateDB\CreateDB.csproj", "{586142C5-8FD9-4EA1-86F5-97787EF462BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{A48D41AD-DBE5-4DA1-B4EE-02C282E002FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A48D41AD-DBE5-4DA1-B4EE-02C282E002FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A48D41AD-DBE5-4DA1-B4EE-02C282E002FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BA89627F-24BB-4D2F-A8A8-1459B784A9F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA89627F-24BB-4D2F-A8A8-1459B784A9F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA89627F-24BB-4D2F-A8A8-1459B784A9F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA89627F-24BB-4D2F-A8A8-1459B784A9F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{586142C5-8FD9-4EA1-86F5-97787EF462BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{586142C5-8FD9-4EA1-86F5-97787EF462BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{586142C5-8FD9-4EA1-86F5-97787EF462BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{586142C5-8FD9-4EA1-86F5-97787EF462BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

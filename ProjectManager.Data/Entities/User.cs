@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ProjectManager.Data.Models
+namespace ProjectManager.Data.Entities
 {
     public class User
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectManager.Data.Models
+namespace ProjectManager.Data.Entities
 {
     public class Staff
     {
