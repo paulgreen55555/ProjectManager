@@ -1,6 +1,6 @@
-﻿namespace ProjectManager.BusinessLogic.Models
+﻿namespace ProjectManager.BusinessLogic.DTO
 {
-    public class User
+    public class UserDTO
     {
         public int UserId { get; set; }
 
@@ -8,7 +8,7 @@
 
         public string Password { get; set; }
 
-        public Permission PermissionId { get; set; }
+        public PermissionDTO PermissionId { get; set; }
         public string Email { get; set; }
     }
 }

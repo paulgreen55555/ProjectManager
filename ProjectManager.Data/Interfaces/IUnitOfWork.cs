@@ -3,7 +3,7 @@ using ProjectManager.Data.Entities;
 
 namespace ProjectManager.Data.Interfaces
 {
-    interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork : IDisposable
     {
         IRepository<Project> Projects { get; }
         void Save();

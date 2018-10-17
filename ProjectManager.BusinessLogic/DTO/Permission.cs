@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectManager.BusinessLogic.Models
+namespace ProjectManager.BusinessLogic.DTO
 {
-    public class Permission
+    public class PermissionDTO
     {
         public int PermissionId { get; set; }
 

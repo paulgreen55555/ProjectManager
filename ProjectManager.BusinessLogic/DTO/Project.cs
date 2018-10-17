@@ -5,9 +5,9 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectManager.BusinessLogic.Models
+namespace ProjectManager.BusinessLogic.DTO
 {
-    public class Project
+    public class ProjectDTO
     {
         public int ProjectId { get; set; }
 
@@ -23,6 +23,5 @@ namespace ProjectManager.BusinessLogic.Models
 
         public DateTime CloseDate { get; set; }
 
-        public List<Staff> StaffList { get; set; }
     }
 }

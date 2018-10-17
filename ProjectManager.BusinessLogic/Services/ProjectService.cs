@@ -1,15 +1,28 @@
-﻿using ProjectManager.BusinessLogic.Models;
+﻿using ProjectManager.BusinessLogic.DTO;
+using ProjectManager.BusinessLogic.Interfaces;
+using ProjectManager.BusinessLogic.Mapping;
 using ProjectManager.Data.Interfaces;
+
 
 namespace ProjectManager.BusinessLogic.Services
 {
     public class ProjectService : IProjectService
     {
-        public IProjectService projectService = new Data.Services.ProjectService();
+        private IUnitOfWork db { get; set; }
 
-        public Project GetProjectById()
+        public ProjectService(IUnitOfWork uow)
         {
-           return projectService.GetProjectById();
+            db = uow;
+        }
+
+        public ProjectDTO GetProject(int id)
+        {
+            return ProjectMapper.ProjectToBussines(db.Projects.Get(id));
+        }
+
+        public System.Collections.Generic.IEnumerable<ProjectDTO> GetProjectList(int?[] ids)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

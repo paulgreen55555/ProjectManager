@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectManager.BusinessLogic.Models
+namespace ProjectManager.BusinessLogic.DTO
 {
-    public class Staff
+    public class StaffDTO
     {
         public int StaffId { get; set; }
         public int UserId { get; set; }
@@ -14,8 +14,7 @@ namespace ProjectManager.BusinessLogic.Models
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public Positions Position { get; set; }
-
-        public Phone Phone { get; set; }
+        public PhoneDTO Phone { get; set; }
     }
 
     public enum Positions
