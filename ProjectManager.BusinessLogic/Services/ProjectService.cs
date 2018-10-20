@@ -1,5 +1,7 @@
 ﻿using ProjectManager.BusinessLogic.DTO;
 using ProjectManager.BusinessLogic.Interfaces;
+using ProjectManager.BusinessLogic.Mapping;
+using ProjectManager.Data.Entities;
 using ProjectManager.Data.Interfaces;
 
 
@@ -16,7 +18,12 @@ namespace ProjectManager.BusinessLogic.Services
 
         public ProjectDTO GetProject(int id)
         {
-            return null;
+            Project project = db.Projects.Get(id);
+            ProjectDTO projectDto = new ProjectDTO();
+
+            ProjectMapping.Map(project, projectDto);
+
+            return projectDto;
         }
 
         public System.Collections.Generic.IEnumerable<ProjectDTO> GetProjectList(int?[] ids)
