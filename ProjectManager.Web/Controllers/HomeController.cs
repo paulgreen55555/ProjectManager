@@ -9,10 +9,10 @@ namespace ProjectManager.Web.Controllers
         {
             ViewBag.Title = "Home Page";
 
-            ProjectService project = new ProjectService();
+
             
 
-            return View(project.GetProjectById());
+            return View();
         }
     }
 }

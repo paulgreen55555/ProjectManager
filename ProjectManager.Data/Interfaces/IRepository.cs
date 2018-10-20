@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectManager.Data.Interfaces
 {
-    interface IRepository<T>
+    public interface IRepository<T>
     {
         IEnumerable<T> GetAll();
         T Get(int id);
