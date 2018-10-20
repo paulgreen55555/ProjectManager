@@ -3,7 +3,7 @@ using ProjectManager.BusinessLogic.DTO;
 
 namespace ProjectManager.BusinessLogic.Interfaces
 {
-    interface IProjectService
+    public interface IProjectService
     {
         ProjectDTO GetProject(int id);
         IEnumerable<ProjectDTO> GetProjectList(int?[] ids);

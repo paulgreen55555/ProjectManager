@@ -1,6 +1,5 @@
 ﻿using ProjectManager.BusinessLogic.DTO;
 using ProjectManager.BusinessLogic.Interfaces;
-using ProjectManager.BusinessLogic.Mapping;
 using ProjectManager.Data.Entities;
 using ProjectManager.Data.Interfaces;
 
@@ -21,7 +20,7 @@ namespace ProjectManager.BusinessLogic.Services
             Project project = db.Projects.Get(id);
             ProjectDTO projectDto = new ProjectDTO();
 
-            ProjectMapping.Map(project, projectDto);
+            Mapping.Mapping.Map(project, projectDto);
 
             return projectDto;
         }

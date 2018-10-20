@@ -6,7 +6,7 @@ using ProjectManager.Data.Entities;
 
 namespace ProjectManager.Data.Repositories
 {
-    class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private DataContext db;
         private ProjectRepository pojectRepository;

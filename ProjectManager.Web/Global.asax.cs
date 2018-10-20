@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Ninject;
+using Ninject.Modules;
+using Ninject.Web.Mvc;
 using ProjectManager.BusinessLogic.Infrastructure;
+using ProjectManager.BusinessLogic.Services;
+using ProjectManager.Web.Util;
 
 namespace ProjectManager.Web
 {
@@ -19,7 +20,14 @@ namespace ProjectManager.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AutomapperBLProfile.Configure();
+            Mapping.Mapping.Configure();
+
+
+            NinjectModule projectModule = new ProjectModule();
+            NinjectModule serviceModule = new ServiceModule("DefaultConnection");
+            var kernel = new StandardKernel(projectModule, serviceModule);
+            DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
+            
         }
     }
 }

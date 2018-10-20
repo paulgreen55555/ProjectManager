@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManager.Test", "Proj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDB", "CreateDB\CreateDB.csproj", "{586142C5-8FD9-4EA1-86F5-97787EF462BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManager.Mapping", "ProjectManager.Mapping\ProjectManager.Mapping.csproj", "{C277EAE6-7B1D-4D04-9D54-BFAF97FC396F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{586142C5-8FD9-4EA1-86F5-97787EF462BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{586142C5-8FD9-4EA1-86F5-97787EF462BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{586142C5-8FD9-4EA1-86F5-97787EF462BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C277EAE6-7B1D-4D04-9D54-BFAF97FC396F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C277EAE6-7B1D-4D04-9D54-BFAF97FC396F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C277EAE6-7B1D-4D04-9D54-BFAF97FC396F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C277EAE6-7B1D-4D04-9D54-BFAF97FC396F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
