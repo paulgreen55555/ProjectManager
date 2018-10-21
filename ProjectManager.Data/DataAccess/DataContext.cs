@@ -15,6 +15,8 @@ namespace ProjectManager.Data.DataAccess
         public DataContext(string connectionString)
             : base(connectionString)
         {
+            var ensureDLLIsCopied =
+                System.Data.Entity.SqlServer.SqlProviderServices.Instance; 
         }
     }
 }

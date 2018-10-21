@@ -1,4 +1,4 @@
-﻿using ProjectManager.BusinessLogic.Models;
+﻿using ProjectManager.BusinessLogic.DTO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ProjectManager.Test
@@ -9,7 +9,7 @@ namespace ProjectManager.Test
         [TestMethod]
         public void FirstTest()
         {
-            Project project = new Project();
+            ProjectDTO project = new ProjectDTO();
             Assert.AreEqual(project, project);
         }
     }

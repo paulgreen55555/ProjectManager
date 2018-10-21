@@ -12,8 +12,27 @@ namespace ProjectManager.Data.DataAccess
     {
         protected override void Seed(DataContext db)
         {
-            db.Projects.Add(new Project{ProjectId = 1, Name = "Project1", Discription = "Proj1", OwnerId = 1});
-            db.Projects.Add(new Project { ProjectId = 2, Name = "Project2", Discription = "Proj2", OwnerId = 2 });
+            db.Projects.Add(new Project
+            {
+                ProjectId = 2,
+                Name = "Project2",
+                Discription = "Proj2",
+                OwnerId = 1,
+                EndDate = DateTime.Now,
+                StartDate = DateTime.Now,
+                CloseDate = DateTime.Now
+            });
+
+            db.Projects.Add(new Project
+            {
+                ProjectId = 3,
+                Name = "Project3",
+                Discription = "Proj3",
+                OwnerId = 1,
+                EndDate = DateTime.Now,
+                StartDate = DateTime.Now,
+                CloseDate = DateTime.Now
+            });
             db.SaveChanges();
         }
     }

@@ -24,7 +24,7 @@ namespace ProjectManager.Web
 
 
             NinjectModule projectModule = new ProjectModule();
-            NinjectModule serviceModule = new ServiceModule("DefaultConnection");
+            NinjectModule serviceModule = new ServiceModule("ProjectManagerDb");
             var kernel = new StandardKernel(projectModule, serviceModule);
             DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
             
