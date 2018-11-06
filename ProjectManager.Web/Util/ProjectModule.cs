@@ -1,4 +1,6 @@
-﻿using Ninject.Modules;
+﻿using System.Web;
+using Ninject.Modules;
+using Ninject.Web.Common;
 using ProjectManager.BusinessLogic.Interfaces;
 using ProjectManager.BusinessLogic.Services;
 
