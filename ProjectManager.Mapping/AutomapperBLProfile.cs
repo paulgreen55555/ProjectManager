@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using ProjectManager.Data.Entities;
-using ProjectManager.BusinessLogic.DTO;
+using ProjectManager.Entities.DataEntities;
+using ProjectManager.Entities.DTO;
 
-namespace ProjectManager.BusinessLogic.Infrastructure
+namespace ProjectManager.Mapping
 {
     public class AutomapperBLProfile : Profile
     {

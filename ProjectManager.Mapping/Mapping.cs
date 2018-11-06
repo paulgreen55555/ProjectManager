@@ -1,6 +1,4 @@
 ﻿using AutoMapper;
-using ProjectManager.BusinessLogic.Infrastructure;
-using ProjectManager.Web.Infrastructure;
 
 namespace ProjectManager.Mapping
 {

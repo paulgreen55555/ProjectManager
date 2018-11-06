@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-using ProjectManager.Data.Entities;
+using ProjectManager.Entities.DataEntities;
 
 namespace ProjectManager.Data.DataAccess
 {

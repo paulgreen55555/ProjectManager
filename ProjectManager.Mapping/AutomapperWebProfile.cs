@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using ProjectManager.BusinessLogic.DTO;
-using ProjectManager.Web.Models;
+using ProjectManager.Entities.DTO;
+using ProjectManager.Entities.ViewModels;
 
-namespace ProjectManager.Web.Infrastructure
+namespace ProjectManager.Mapping
 {
     public class AutomapperWebProfile : Profile
     {

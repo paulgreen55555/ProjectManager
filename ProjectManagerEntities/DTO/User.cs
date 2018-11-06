@@ -1,4 +1,4 @@
-﻿namespace ProjectManager.BusinessLogic.DTO
+﻿namespace ProjectManager.Entities.DTO
 {
     public class UserDTO
     {

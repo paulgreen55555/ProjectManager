@@ -6,7 +6,6 @@ using Ninject;
 using Ninject.Modules;
 using Ninject.Web.Mvc;
 using ProjectManager.BusinessLogic.Infrastructure;
-using ProjectManager.BusinessLogic.Services;
 using ProjectManager.Web.Util;
 
 namespace ProjectManager.Web

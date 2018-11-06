@@ -35,9 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ProjectManager.BusinessLogic">
-      <HintPath>..\ProjectManager.BusinessLogic\bin\Debug\ProjectManager.BusinessLogic.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -58,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectManagerEntities\ProjectManager.Entities.csproj">
+      <Project>{45724885-74d0-46ec-abb4-580c1601188b}</Project>
+      <Name>ProjectManager.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

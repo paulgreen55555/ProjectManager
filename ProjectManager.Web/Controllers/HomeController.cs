@@ -1,9 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using ProjectManager.BusinessLogic.Interfaces;
-using ProjectManager.Web.Models;
-using ProjectManager.BusinessLogic.DTO;
+using ProjectManager.Entities.DTO;
+using ProjectManager.Entities.ViewModels;
 
 namespace ProjectManager.Web.Controllers
 {
@@ -21,7 +20,7 @@ namespace ProjectManager.Web.Controllers
             ProjectViewModel projectViewModel = new ProjectViewModel();
             try
             {
-                ProjectDTO projectDto = projectService.GetProject(5);
+                ProjectDTO projectDto = projectService.GetProject(3);
                 Mapping.Mapping.Map(projectDto, projectViewModel);
             }
             catch (ValidationException ex)

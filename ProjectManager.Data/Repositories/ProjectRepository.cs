@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
 using ProjectManager.Data.DataAccess;
 using ProjectManager.Data.Interfaces;
-using ProjectManager.Data.Entities;
+using ProjectManager.Entities.DataEntities;
 
 namespace ProjectManager.Data.Repositories
 {

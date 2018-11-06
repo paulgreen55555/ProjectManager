@@ -1,8 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.AccessControl;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ProjectManager.Data.Entities
+namespace ProjectManager.Entities.DTO
 {
-    public class Project
+    public class ProjectDTO
     {
         public int ProjectId { get; set; }
 

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using ProjectManager.BusinessLogic.DTO;
+using ProjectManager.Entities.DTO;
 
 namespace ProjectManager.BusinessLogic.Interfaces
 {

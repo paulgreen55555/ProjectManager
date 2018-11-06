@@ -34,15 +34,6 @@
       <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ProjectManager.BusinessLogic">
-      <HintPath>..\ProjectManager.BusinessLogic\bin\Debug\ProjectManager.BusinessLogic.dll</HintPath>
-    </Reference>
-    <Reference Include="ProjectManager.Data">
-      <HintPath>..\ProjectManager.Data\bin\Debug\ProjectManager.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="ProjectManager.Web">
-      <HintPath>..\ProjectManager.Web\bin\ProjectManager.Web.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -57,11 +48,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutomapperBLProfile.cs" />
+    <Compile Include="AutomapperWebProfile.cs" />
     <Compile Include="Mapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectManagerEntities\ProjectManager.Entities.csproj">
+      <Project>{45724885-74d0-46ec-abb4-580c1601188b}</Project>
+      <Name>ProjectManager.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

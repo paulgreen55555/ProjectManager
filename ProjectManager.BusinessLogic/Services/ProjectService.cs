@@ -1,9 +1,9 @@
 ﻿using System;
-using ProjectManager.BusinessLogic.DTO;
 using ProjectManager.BusinessLogic.Infrastructure;
 using ProjectManager.BusinessLogic.Interfaces;
-using ProjectManager.Data.Entities;
+using ProjectManager.Entities.DTO;
 using ProjectManager.Data.Interfaces;
+using ProjectManager.Entities.DataEntities;
 
 
 namespace ProjectManager.BusinessLogic.Services

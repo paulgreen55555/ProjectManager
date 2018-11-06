@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProjectManager.Entities.DataEntities;
 
-namespace ProjectManager.BusinessLogic.DTO
+namespace ProjectManager.Entities.DataEntities
 {
-    public class StaffDTO
+    public class Staff
     {
         public int StaffId { get; set; }
-        public int UserId { get; set; }
+        public virtual User UserId { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public Positions Position { get; set; }
-        public PhoneDTO Phone { get; set; }
+
+        public Phone Phone { get; set; }
+
+        public WorkType WorkType { get; set; }
     }
 
     public enum Positions
@@ -25,4 +24,11 @@ namespace ProjectManager.BusinessLogic.DTO
         Programer = 3,
         Tester = 4
     }
+
+    public enum WorkType
+    {
+        Day = 0,
+        Percent = 1
+    }
+
 }

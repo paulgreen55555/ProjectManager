@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace ProjectManager.BusinessLogic.DTO
+namespace ProjectManager.Entities.ViewModels
+
 {
-    public class ProjectDTO
+    public class ProjectViewModel
     {
         public int ProjectId { get; set; }
 
@@ -22,6 +21,5 @@ namespace ProjectManager.BusinessLogic.DTO
         public DateTime EndDate { get; set; }
 
         public DateTime CloseDate { get; set; }
-
     }
 }

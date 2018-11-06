@@ -1,8 +1,7 @@
 ﻿using System;
 using ProjectManager.Data.DataAccess;
 using ProjectManager.Data.Interfaces;
-
-using ProjectManager.Data.Entities;
+using ProjectManager.Entities.DataEntities;
 
 namespace ProjectManager.Data.Repositories
 {

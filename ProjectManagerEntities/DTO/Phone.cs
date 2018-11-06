@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectManager.Data.Entities
+namespace ProjectManager.Entities.DTO
 {
-    public class Phone
+    public class PhoneDTO
     {
         public string Number { get; set; }
-
         public string Code { get; set; }
     }
 }

@@ -38,9 +38,6 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ProjectManager.BusinessLogic">
-      <HintPath>..\ProjectManager.BusinessLogic\bin\Debug\ProjectManager.BusinessLogic.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -55,11 +52,6 @@
   <ItemGroup>
     <Compile Include="DataAccess\DataContext.cs" />
     <Compile Include="DataAccess\DbInitializer.cs" />
-    <Compile Include="Entities\Permission.cs" />
-    <Compile Include="Entities\Phone.cs" />
-    <Compile Include="Entities\Project.cs" />
-    <Compile Include="Entities\Staff.cs" />
-    <Compile Include="Entities\User.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -79,7 +71,12 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectManagerEntities\ProjectManager.Entities.csproj">
+      <Project>{45724885-74d0-46ec-abb4-580c1601188b}</Project>
+      <Name>ProjectManager.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

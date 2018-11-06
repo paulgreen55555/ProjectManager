@@ -4,18 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectManager.Data.Entities
+namespace ProjectManager.Entities.DTO
 {
-    public class Permission
+    public class PermissionDTO
     {
         public int PermissionId { get; set; }
 
         public string Discription { get; set; }
     }
-
-    public enum Roles
-    {
-
-    }
 }
-

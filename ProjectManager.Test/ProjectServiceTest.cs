@@ -1,4 +1,4 @@
-﻿using ProjectManager.BusinessLogic.DTO;
+﻿using ProjectManager.Entities.DTO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ProjectManager.Test

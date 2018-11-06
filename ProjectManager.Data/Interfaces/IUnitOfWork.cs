@@ -1,5 +1,5 @@
 ﻿using System;
-using ProjectManager.Data.Entities;
+using ProjectManager.Entities.DataEntities;
 
 namespace ProjectManager.Data.Interfaces
 {

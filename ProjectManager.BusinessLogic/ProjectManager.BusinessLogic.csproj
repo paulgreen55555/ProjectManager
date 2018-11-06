@@ -62,13 +62,6 @@
       <HintPath>..\packages\Ninject.MVC5.3.3.0\lib\net45\Ninject.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ProjectManager.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ProjectManager.Data\bin\Debug\ProjectManager.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="ProjectManager.Mapping">
-      <HintPath>..\ProjectManager.Mapping\obj\Debug\ProjectManager.Mapping.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -109,23 +102,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\AutomapperBLProfile.cs" />
     <Compile Include="Infrastructure\ServiceModule.cs" />
     <Compile Include="Infrastructure\ValidationException .cs" />
     <Compile Include="Interfaces\IProjectService.cs" />
     <Compile Include="Services\ProjectService.cs" />
-    <Compile Include="DTO\Permission.cs" />
-    <Compile Include="DTO\Phone.cs" />
-    <Compile Include="DTO\Project.cs" />
-    <Compile Include="DTO\Staff.cs" />
-    <Compile Include="DTO\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectManager.Data\ProjectManager.Data.csproj">
+      <Project>{82460503-0967-4582-b05c-df5028d611cb}</Project>
+      <Name>ProjectManager.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectManager.Mapping\ProjectManager.Mapping.csproj">
+      <Project>{c277eae6-7b1d-4d04-9d54-bfaf97fc396f}</Project>
+      <Name>ProjectManager.Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectManagerEntities\ProjectManager.Entities.csproj">
+      <Project>{45724885-74d0-46ec-abb4-580c1601188b}</Project>
+      <Name>ProjectManager.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
