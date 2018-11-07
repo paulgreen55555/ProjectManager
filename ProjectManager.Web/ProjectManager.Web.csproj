@@ -82,6 +82,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript" />
     <Reference Include="MsieJavaScriptEngine, Version=2.2.2.0, Culture=neutral, PublicKeyToken=a3a2846a37ac0d3e, processorArchitecture=MSIL">
       <HintPath>..\packages\MsieJavaScriptEngine.2.2.2\lib\net45\MsieJavaScriptEngine.dll</HintPath>
       <Private>True</Private>

@@ -1,10 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Net;
+using System.Net.Http;
+using System.Text;
 using System.Web.Http;
 using ProjectManager.BusinessLogic.Interfaces;
 using ProjectManager.Entities.DTO;
 using ProjectManager.Entities.ViewModels;
 using System.Web.Script.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace ProjectManager.Web.Controllers
 {
@@ -24,7 +29,7 @@ namespace ProjectManager.Web.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public IHttpActionResult Get(int id)
         {
             ProjectViewModel projectViewModel = new ProjectViewModel();
             try
@@ -34,9 +39,12 @@ namespace ProjectManager.Web.Controllers
             }
             catch (ValidationException ex)
             {
-                
+
             }
-            return new JavaScriptSerializer().Serialize(projectViewModel); ;
+
+           var jObject = JObject.Parse(JsonConvert.SerializeObject(projectViewModel));
+
+            return Ok(jObject);
         }
 
         // POST api/values
