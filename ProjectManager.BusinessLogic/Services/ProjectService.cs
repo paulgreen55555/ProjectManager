@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using ProjectManager.BusinessLogic.Infrastructure;
 using ProjectManager.BusinessLogic.Interfaces;
 using ProjectManager.Entities.DTO;
@@ -33,9 +35,38 @@ namespace ProjectManager.BusinessLogic.Services
             return projectDto;
         }
 
-        public System.Collections.Generic.IEnumerable<ProjectDTO> GetProjectList(int?[] ids)
+        public List<ProjectDTO> GetProjectList()
         {
-            throw new System.NotImplementedException();
+
+            List<ProjectDTO> resultList = new List<ProjectDTO>();
+            IEnumerable<Project> dbList = db.Projects.GetAll();
+
+
+            foreach (var elProject in dbList)
+            {
+                ProjectDTO projectDtotemp = new ProjectDTO();
+
+                Mapping.Mapping.Map(elProject, projectDtotemp);
+                resultList.Add(projectDtotemp);
+
+            }
+
+            return resultList;
+        }
+
+        public void AddProject()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateProject(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteProect(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

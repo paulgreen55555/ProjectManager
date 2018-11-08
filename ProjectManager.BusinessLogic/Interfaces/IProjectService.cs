@@ -6,7 +6,13 @@ namespace ProjectManager.BusinessLogic.Interfaces
     public interface IProjectService
     {
         ProjectDTO GetProject(int id);
-        IEnumerable<ProjectDTO> GetProjectList(int?[] ids);
+        List<ProjectDTO> GetProjectList();
+
+        void AddProject();
+
+        void UpdateProject(int id);
+
+        void DeleteProect(int id);
 
     }
 }

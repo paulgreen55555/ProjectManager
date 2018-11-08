@@ -23,9 +23,41 @@ namespace ProjectManager.Web.Controllers
         }
 
         // GET api/values
-        public IEnumerable<string> Get()
+        public IHttpActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            List<string> result = new List<string>();
+
+            List<ProjectViewModel> resultList = new List<ProjectViewModel>();
+            List<ProjectViewModel> projectViewModels = new List<ProjectViewModel>();
+
+
+            List<JObject> jObjectList = new List<JObject>();
+            try
+            {
+                List<ProjectDTO> projectDtoList = projectService.GetProjectList();
+
+                foreach (var elProject in projectDtoList)
+                {
+                    ProjectViewModel projectViewModelTemp = new ProjectViewModel();
+
+                    Mapping.Mapping.Map(elProject, projectViewModelTemp);
+                    resultList.Add(projectViewModelTemp);
+
+                }
+
+                foreach (var el in resultList)
+                {
+                    jObjectList.Add(JObject.Parse(JsonConvert.SerializeObject(el)));
+                }
+                
+
+            }
+            catch (ValidationException ex)
+            {
+
+            }
+
+            return Ok(jObjectList);
         }
 
         // GET api/values/5
@@ -47,19 +79,5 @@ namespace ProjectManager.Web.Controllers
             return Ok(jObject);
         }
 
-        // POST api/values
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
-        }
     }
 }
