@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Web.Http;
+using System.Web.Http.ModelBinding;
 using ProjectManager.BusinessLogic.Interfaces;
 using ProjectManager.Entities.DTO;
 using ProjectManager.Entities.ViewModels;
@@ -22,7 +24,6 @@ namespace ProjectManager.Web.Controllers
             projectService = projSv;
         }
 
-        // GET api/values
         public IHttpActionResult Get()
         {
             List<string> result = new List<string>();
@@ -35,6 +36,11 @@ namespace ProjectManager.Web.Controllers
             try
             {
                 List<ProjectDTO> projectDtoList = projectService.GetProjectList();
+
+                if (projectDtoList.Count == 0)
+                {
+                    return NotFound();
+                }
 
                 foreach (var elProject in projectDtoList)
                 {
@@ -60,7 +66,6 @@ namespace ProjectManager.Web.Controllers
             return Ok(jObjectList);
         }
 
-        // GET api/values/5
         public IHttpActionResult Get(int id)
         {
             ProjectViewModel projectViewModel = new ProjectViewModel();
@@ -77,6 +82,45 @@ namespace ProjectManager.Web.Controllers
            var jObject = JObject.Parse(JsonConvert.SerializeObject(projectViewModel));
 
             return Ok(jObject);
+        }
+
+        [HttpPost]
+        public IHttpActionResult Post(ProjectViewModel project )
+        {
+            if (!ModelState.IsValid)
+                return BadRequest("Invalid data.");
+
+            try
+            {
+                ProjectDTO projectDto = new ProjectDTO();
+                Mapping.Mapping.Map(project, projectDto);
+                projectService.AddProject(projectDto);
+            }
+            catch (ValidationException e)
+            {
+                
+            }
+           
+            return Ok();
+        }
+
+        public IHttpActionResult Put(ProjectViewModel project)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest("Invalid data.");
+
+            try
+            {
+                ProjectDTO projectDto = new ProjectDTO();
+                Mapping.Mapping.Map(project, projectDto);
+                projectService.UpdateProject(projectDto);
+            }
+            catch (ValidationException e)
+            {
+
+            }
+
+            return Ok();
         }
 
     }

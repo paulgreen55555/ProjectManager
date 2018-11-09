@@ -8,11 +8,11 @@ namespace ProjectManager.BusinessLogic.Interfaces
         ProjectDTO GetProject(int id);
         List<ProjectDTO> GetProjectList();
 
-        void AddProject();
+        void AddProject(ProjectDTO project);
 
-        void UpdateProject(int id);
+        void UpdateProject(ProjectDTO project);
 
-        void DeleteProect(int id);
+        void DeleteProject(int id);
 
     }
 }

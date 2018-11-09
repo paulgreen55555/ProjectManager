@@ -25,7 +25,7 @@ namespace ProjectManager.BusinessLogic.Services
             Project project = db.Projects.Get(id);
             if (project == null)
             {
-                throw new ValidationException(String.Format("Project with id={0} doesn't exists.",id), "");
+                throw new ValidationException(String.Format("Project with id={0} doesn't exists.", id), "");
             }
 
             ProjectDTO projectDto = new ProjectDTO();
@@ -54,17 +54,43 @@ namespace ProjectManager.BusinessLogic.Services
             return resultList;
         }
 
-        public void AddProject()
+        public void AddProject(ProjectDTO project)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Project projectDb = new Project();
+                Mapping.Mapping.Map(project, projectDb);
+                db.Projects.Create(projectDb);
+                db.Save();
+
+            }
+            catch (Exception e)
+            {
+                throw new ValidationException("Can't add to Data Base.", "");
+            }
+
         }
 
-        public void UpdateProject(int id)
+        public void UpdateProject(ProjectDTO project)
         {
-            throw new NotImplementedException();
+            ProjectDTO oldProject = GetProject(project.ProjectId);
+
+            if (oldProject != null)
+            {
+                Project newProject = new Project();
+                oldProject = project;
+                Mapping.Mapping.Map(oldProject, newProject);
+                db.Projects.Update(newProject);
+                db.Save();
+            }
+            else
+            {
+                throw new ValidationException("Can't edit project.", "");
+            }
+
         }
 
-        public void DeleteProect(int id)
+        public void DeleteProject(int id)
         {
             throw new NotImplementedException();
         }
