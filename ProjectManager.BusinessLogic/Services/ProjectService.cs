@@ -73,17 +73,15 @@ namespace ProjectManager.BusinessLogic.Services
 
         public void UpdateProject(ProjectDTO project)
         {
-            ProjectDTO oldProject = GetProject(project.ProjectId);
 
-            if (oldProject != null)
-            {
+            try { 
                 Project newProject = new Project();
-                oldProject = project;
-                Mapping.Mapping.Map(oldProject, newProject);
+                
+                Mapping.Mapping.Map(project, newProject);
                 db.Projects.Update(newProject);
                 db.Save();
             }
-            else
+            catch
             {
                 throw new ValidationException("Can't edit project.", "");
             }
