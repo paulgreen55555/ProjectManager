@@ -20,7 +20,7 @@ namespace ProjectManager.Web.Controllers
             ProjectViewModel projectViewModel = new ProjectViewModel();
             try
             {
-                ProjectDTO projectDto = projectService.GetProject(3);
+                ProjectDTO projectDto = projectService.GetProject(1);
                 Mapping.Mapping.Map(projectDto, projectViewModel);
             }
             catch (ValidationException ex)
