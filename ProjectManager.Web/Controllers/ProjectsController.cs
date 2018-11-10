@@ -123,5 +123,11 @@ namespace ProjectManager.Web.Controllers
             return Ok();
         }
 
+        public IHttpActionResult Delete(int id)
+        {
+            projectService.DeleteProject(id);
+            return Ok();
+        }
+
     }
 }

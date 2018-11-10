@@ -90,7 +90,16 @@ namespace ProjectManager.BusinessLogic.Services
 
         public void DeleteProject(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                db.Projects.Delete(id);
+                db.Save();
+            }
+            catch (Exception e)
+            {
+                throw new ValidationException("Can't delete project.", "");
+            }
+           
         }
     }
 }
