@@ -10,7 +10,7 @@ namespace ProjectManager.Entities.DataEntities
     {
         public int PermissionId { get; set; }
 
-        public string Discription { get; set; }
+        public string Description { get; set; }
     }
 
     public enum Roles

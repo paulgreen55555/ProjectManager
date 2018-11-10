@@ -13,7 +13,7 @@ namespace ProjectManager.Entities.DTO
 
         public string Name { get; set; }
 
-        public string Discription { get; set; }
+        public string Description { get; set; }
 
         public int OwnerId { get; set; }
 
