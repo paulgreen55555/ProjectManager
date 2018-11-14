@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Net;
-using System.Net.Http;
-using System.Text;
 using System.Web.Http;
-using System.Web.Http.ModelBinding;
 using ProjectManager.BusinessLogic.Interfaces;
 using ProjectManager.Entities.DTO;
 using ProjectManager.Entities.ViewModels;
-using System.Web.Script.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using ProjectManager.Entities.ViewModels.Project;
 
 namespace ProjectManager.Web.Controllers
 {
@@ -85,7 +80,7 @@ namespace ProjectManager.Web.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult Post(ProjectViewModel project )
+        public IHttpActionResult Post(ProjectAddViewModel project )
         {
             if (!ModelState.IsValid)
                 return BadRequest("Invalid data.");

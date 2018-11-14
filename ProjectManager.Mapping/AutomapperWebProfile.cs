@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using ProjectManager.Entities.DTO;
 using ProjectManager.Entities.ViewModels;
+using ProjectManager.Entities.ViewModels.Project;
 
 namespace ProjectManager.Mapping
 {
@@ -10,6 +11,9 @@ namespace ProjectManager.Mapping
         {
             CreateMap<ProjectViewModel,ProjectDTO>();
             CreateMap<ProjectDTO, ProjectViewModel>();
+
+            CreateMap<ProjectDTO, ProjectAddViewModel>();
+            CreateMap<ProjectAddViewModel, ProjectDTO>();
         }
 
         public static void Configure()

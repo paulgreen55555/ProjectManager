@@ -13,7 +13,6 @@ namespace ProjectManager.Data.DataAccess
                 ProjectId = 2,
                 Name = "Project2",
                 Description = "Proj2",
-                OwnerId = 1,
                 EndDate = DateTime.Now,
                 StartDate = DateTime.Now,
                 CloseDate = DateTime.Now
@@ -24,7 +23,6 @@ namespace ProjectManager.Data.DataAccess
                 ProjectId = 3,
                 Name = "Project3",
                 Description = "Proj3",
-                OwnerId = 1,
                 EndDate = DateTime.Now,
                 StartDate = DateTime.Now,
                 CloseDate = DateTime.Now

@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using ProjectManager.BusinessLogic.Interfaces;
 using ProjectManager.Entities.DTO;
-using ProjectManager.Entities.ViewModels;
+using ProjectManager.Entities.ViewModels.Project;
 
 namespace ProjectManager.Web.Controllers
 {
@@ -27,8 +27,6 @@ namespace ProjectManager.Web.Controllers
             {
                 return Content(ex.Message);
             }
-            
-
             
 
             ViewBag.Title = "Home Page";
