@@ -12,25 +12,22 @@ namespace ProjectManager.Web.Controllers
 {
     public class ProjectsController : ApiController
     {
-        IProjectService projectService;
+        private readonly  IProjectService _projectService;
 
         public ProjectsController(IProjectService projSv)
         {
-            projectService = projSv;
+            _projectService = projSv;
         }
 
         public IHttpActionResult Get()
         {
-            List<string> result = new List<string>();
 
             List<ProjectViewModel> resultList = new List<ProjectViewModel>();
-            List<ProjectViewModel> projectViewModels = new List<ProjectViewModel>();
-
 
             List<JObject> jObjectList = new List<JObject>();
             try
             {
-                List<ProjectDTO> projectDtoList = projectService.GetProjectList();
+                List<ProjectDTO> projectDtoList = _projectService.GetProjectList();
 
                 if (projectDtoList.Count == 0)
                 {
@@ -50,7 +47,6 @@ namespace ProjectManager.Web.Controllers
                 {
                     jObjectList.Add(JObject.Parse(JsonConvert.SerializeObject(el)));
                 }
-                
 
             }
             catch (ValidationException ex)
@@ -66,7 +62,7 @@ namespace ProjectManager.Web.Controllers
             ProjectViewModel projectViewModel = new ProjectViewModel();
             try
             {
-                ProjectDTO projectDto = projectService.GetProject(id);
+                ProjectDTO projectDto = _projectService.GetProject(id);
                 Mapping.Mapping.Map(projectDto, projectViewModel);
             }
             catch (ValidationException ex)
@@ -89,7 +85,7 @@ namespace ProjectManager.Web.Controllers
             {
                 ProjectDTO projectDto = new ProjectDTO();
                 Mapping.Mapping.Map(project, projectDto);
-                projectService.AddProject(projectDto);
+                _projectService.AddProject(projectDto);
             }
             catch (ValidationException e)
             {
@@ -108,7 +104,7 @@ namespace ProjectManager.Web.Controllers
             {
                 ProjectDTO projectDto = new ProjectDTO();
                 Mapping.Mapping.Map(project, projectDto);
-                projectService.UpdateProject(projectDto);
+                _projectService.UpdateProject(projectDto);
             }
             catch (ValidationException e)
             {
@@ -120,7 +116,7 @@ namespace ProjectManager.Web.Controllers
 
         public IHttpActionResult Delete(int id)
         {
-            projectService.DeleteProject(id);
+            _projectService.DeleteProject(id);
             return Ok();
         }
 

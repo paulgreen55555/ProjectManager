@@ -41,16 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\Permission.cs" />
-    <Compile Include="DTO\Phone.cs" />
-    <Compile Include="DTO\Project.cs" />
-    <Compile Include="DTO\Staff.cs" />
-    <Compile Include="DTO\User.cs" />
+    <Compile Include="DTO\PermissionDTO.cs" />
+    <Compile Include="DTO\PhoneDTO.cs" />
+    <Compile Include="DTO\ProjectDTO.cs" />
+    <Compile Include="DTO\StaffDTO.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="DataEntities\Permission.cs" />
     <Compile Include="DataEntities\Phone.cs" />
     <Compile Include="DataEntities\Project.cs" />
     <Compile Include="DataEntities\Staff.cs" />
     <Compile Include="DataEntities\User.cs" />
+    <Compile Include="Enums\ProjectStatusEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Project\ProjectAddViewModel.cs" />
     <Compile Include="ViewModels\Project\ProjectViewModel.cs" />

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using ProjectManager.Entities.Enums;
 
 namespace ProjectManager.Entities.ViewModels.Project
 
@@ -19,5 +20,7 @@ namespace ProjectManager.Entities.ViewModels.Project
         public DateTime EndDate { get; set; }
 
         public DateTime CloseDate { get; set; }
+
+        public ProjectStatus ProjectStatus { get; set; }
     }
 }

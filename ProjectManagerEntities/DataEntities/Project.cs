@@ -1,4 +1,5 @@
 ﻿using System;
+using ProjectManager.Entities.Enums;
 
 namespace ProjectManager.Entities.DataEntities
 {
@@ -14,7 +15,7 @@ namespace ProjectManager.Entities.DataEntities
 
         public DateTime EndDate { get; set; }
 
-        public DateTime CloseDate { get; set; }
+        public ProjectStatus ProjectStatus { get; set; }
 
     }
 }

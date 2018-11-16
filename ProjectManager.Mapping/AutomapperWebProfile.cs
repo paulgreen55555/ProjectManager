@@ -1,6 +1,7 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Globalization;
+using AutoMapper;
 using ProjectManager.Entities.DTO;
-using ProjectManager.Entities.ViewModels;
 using ProjectManager.Entities.ViewModels.Project;
 
 namespace ProjectManager.Mapping
@@ -12,8 +13,11 @@ namespace ProjectManager.Mapping
             CreateMap<ProjectViewModel,ProjectDTO>();
             CreateMap<ProjectDTO, ProjectViewModel>();
 
-            CreateMap<ProjectDTO, ProjectAddViewModel>();
-            CreateMap<ProjectAddViewModel, ProjectDTO>();
+            CreateMap<ProjectAddViewModel, ProjectDTO>()
+                .ForMember("StartDate", opt => opt.MapFrom(
+                    src => DateTime.ParseExact(src.StartDate, "yyyy-MM-dd", CultureInfo.InvariantCulture)))
+                .ForMember("EndDate", opt => opt.MapFrom(
+                    src => DateTime.ParseExact(src.StartDate, "yyyy-MM-dd", CultureInfo.InvariantCulture)));
         }
 
         public static void Configure()

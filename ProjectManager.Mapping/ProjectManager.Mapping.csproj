@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="AutomapperBLProfile.cs" />
     <Compile Include="AutomapperWebProfile.cs" />
+    <Compile Include="Customs\NullStringConverter .cs" />
     <Compile Include="Mapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

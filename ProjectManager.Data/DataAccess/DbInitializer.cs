@@ -15,7 +15,7 @@ namespace ProjectManager.Data.DataAccess
                 Description = "Proj2",
                 EndDate = DateTime.Now,
                 StartDate = DateTime.Now,
-                CloseDate = DateTime.Now
+                ProjectStatus = 0
             });
 
             db.Projects.Add(new Project
@@ -25,7 +25,7 @@ namespace ProjectManager.Data.DataAccess
                 Description = "Proj3",
                 EndDate = DateTime.Now,
                 StartDate = DateTime.Now,
-                CloseDate = DateTime.Now
+                ProjectStatus = 0
             });
             db.SaveChanges();
         }
