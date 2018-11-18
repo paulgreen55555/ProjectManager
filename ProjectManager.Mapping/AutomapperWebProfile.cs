@@ -15,9 +15,9 @@ namespace ProjectManager.Mapping
 
             CreateMap<ProjectAddViewModel, ProjectDTO>()
                 .ForMember("StartDate", opt => opt.MapFrom(
-                    src => DateTime.ParseExact(src.StartDate, "yyyy-MM-dd", CultureInfo.InvariantCulture)))
+                    src => DateTime.ParseExact(src.StartDate, "dd-MM-yyyy", CultureInfo.InvariantCulture)))
                 .ForMember("EndDate", opt => opt.MapFrom(
-                    src => DateTime.ParseExact(src.StartDate, "yyyy-MM-dd", CultureInfo.InvariantCulture)));
+                    src => DateTime.ParseExact(src.EndDate, "dd-MM-yyyy", CultureInfo.InvariantCulture)));
         }
 
         public static void Configure()
