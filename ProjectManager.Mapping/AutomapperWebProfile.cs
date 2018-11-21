@@ -10,10 +10,16 @@ namespace ProjectManager.Mapping
     {
         public AutomapperWebProfile()
         {
-            CreateMap<ProjectViewModel,ProjectDTO>();
+            CreateMap<ProjectViewModel, ProjectDTO>();           
             CreateMap<ProjectDTO, ProjectViewModel>();
 
             CreateMap<ProjectAddViewModel, ProjectDTO>()
+                .ForMember("StartDate", opt => opt.MapFrom(
+                    src => DateTime.ParseExact(src.StartDate, "dd-MM-yyyy", CultureInfo.InvariantCulture)))
+                .ForMember("EndDate", opt => opt.MapFrom(
+                    src => DateTime.ParseExact(src.EndDate, "dd-MM-yyyy", CultureInfo.InvariantCulture)));
+
+            CreateMap<ProjectEditViewModel, ProjectDTO>()
                 .ForMember("StartDate", opt => opt.MapFrom(
                     src => DateTime.ParseExact(src.StartDate, "dd-MM-yyyy", CultureInfo.InvariantCulture)))
                 .ForMember("EndDate", opt => opt.MapFrom(

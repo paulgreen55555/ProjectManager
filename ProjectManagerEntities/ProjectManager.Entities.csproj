@@ -54,6 +54,7 @@
     <Compile Include="Enums\ProjectStatusEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Project\ProjectAddViewModel.cs" />
+    <Compile Include="ViewModels\Project\ProjectEditViewModel.cs" />
     <Compile Include="ViewModels\Project\ProjectViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

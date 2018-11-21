@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Web.Http;
 using ProjectManager.BusinessLogic.Interfaces;
 using ProjectManager.Entities.DTO;
-using ProjectManager.Entities.ViewModels;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ProjectManager.Entities.ViewModels.Project;
@@ -95,7 +94,7 @@ namespace ProjectManager.Web.Controllers
             return Ok();
         }
 
-        public IHttpActionResult Put(ProjectViewModel project)
+        public IHttpActionResult Put(ProjectEditViewModel project)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Invalid data.");
